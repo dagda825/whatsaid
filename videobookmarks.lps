@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <Version Value="12"/>
+    <BuildModes Active="Default"/>
+    <Units>
+      <Unit>
+        <Filename Value="videobookmarks.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="25" Y="13"/>
+        <UsageCount Value="217"/>
+      </Unit>
+      <Unit>
+        <Filename Value="main.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmMain"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="Main"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="124"/>
+        <CursorPos X="12" Y="136"/>
+        <UsageCount Value="217"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="datamodule.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="DataMod"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="DataModule"/>
+        <UnitName Value="DataModule"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="25"/>
+        <CursorPos X="49" Y="45"/>
+        <UsageCount Value="115"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="/media/jon/Storage2/Jon Archive/Projects/Pascal/VideoBookMarks/dataaccess.pas"/>
+        <UnitName Value="DataAccess"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="60"/>
+        <CursorPos X="5" Y="86"/>
+        <FoldState Value=" T3X26211 PPc2;"/>
+        <UsageCount Value="18"/>
+      </Unit>
+      <Unit>
+        <Filename Value="/media/jon/Storage2/Jon Archive/Projects/Pascal/VideoBookMarks/bookmarkform.pas"/>
+        <ComponentName Value="frmBookmarks"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="BookMarkForm"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="35"/>
+        <CursorPos Y="109"/>
+        <FoldState Value=" T3i7033 Pi1]9o"/>
+        <UsageCount Value="79"/>
+      </Unit>
+      <Unit>
+        <Filename Value="/usr/share/lazarus/3.2.0/lcl/lresources.pp"/>
+        <UnitName Value="LResources"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="3150"/>
+        <CursorPos Y="3164"/>
+        <UsageCount Value="1"/>
+      </Unit>
+      <Unit>
+        <Filename Value="/media/jon/Storage2/Jon Archive/Projects/Pascal/PasLibVlc/source.vcl/PasLibVlcPlayerUnit.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="4998"/>
+        <CursorPos X="5" Y="5019"/>
+        <UsageCount Value="13"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit>
+      <Unit>
+        <Filename Value="/media/jon/Storage2/Jon Archive/Projects/Pascal/VideoBookMarks/unit1.pas"/>
+        <ComponentName Value="Form1"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="Unit1"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="5"/>
+        <CursorPos X="8" Y="19"/>
+        <UsageCount Value="12"/>
+      </Unit>
+      <Unit>
+        <Filename Value="/media/jon/Storage2/Jon Archive/Projects/Pascal/VideoBookMarks/filedict.pas"/>
+        <UnitName Value="FileDict"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="7"/>
+        <CursorPos X="5" Y="18"/>
+        <UsageCount Value="41"/>
+      </Unit>
+      <Unit>
+        <Filename Value="/usr/share/lazarus/3.8.0/lcl/include/control.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="2949"/>
+        <CursorPos Y="2976"/>
+        <UsageCount Value="15"/>
+      </Unit>
+    </Units>
+    <JumpHistory HistoryIndex="18">
+      <Position>
+        <Filename Value="main.pas"/>
+        <Caret Line="60" Column="93" TopLine="45"/>
+      </Position>
+      <Position>
+        <Filename Value="main.pas"/>
+        <Caret Line="3" Column="20"/>
+      </Position>
+      <Position>
+        <Filename Value="main.pas"/>
+        <Caret Line="312" Column="43" TopLine="301"/>
+      </Position>
+      <Position>
+        <Filename Value="datamodule.pas"/>
+        <Caret Line="20" Column="10" TopLine="10"/>
+      </Position>
+      <Position>
+        <Filename Value="datamodule.pas"/>
+        <Caret Line="18" Column="5" TopLine="10"/>
+      </Position>
+      <Position>
+        <Filename Value="datamodule.pas"/>
+        <Caret Line="17" Column="5" TopLine="10"/>
+      </Position>
+      <Position>
+        <Filename Value="datamodule.pas"/>
+        <Caret Line="18" Column="5" TopLine="10"/>
+      </Position>
+      <Position>
+        <Filename Value="datamodule.pas"/>
+        <Caret Line="14" Column="3" TopLine="10"/>
+      </Position>
+      <Position>
+        <Filename Value="main.pas"/>
+        <Caret Line="312" Column="25" TopLine="298"/>
+      </Position>
+      <Position>
+        <Filename Value="main.pas"/>
+        <Caret Line="90" TopLine="79"/>
+      </Position>
+      <Position>
+        <Filename Value="datamodule.pas"/>
+        <Caret Line="7"/>
+      </Position>
+      <Position>
+        <Filename Value="datamodule.pas"/>
+        <Caret Line="6" Column="2"/>
+      </Position>
+      <Position>
+        <Filename Value="datamodule.pas"/>
+        <Caret Line="43" Column="5" TopLine="25"/>
+      </Position>
+      <Position>
+        <Filename Value="main.pas"/>
+        <Caret Line="22" Column="21" TopLine="11"/>
+      </Position>
+      <Position>
+        <Filename Value="main.pas"/>
+        <Caret Line="10" Column="78" TopLine="5"/>
+      </Position>
+      <Position>
+        <Filename Value="main.pas"/>
+        <Caret Line="13" Column="50"/>
+      </Position>
+      <Position>
+        <Filename Value="datamodule.pas"/>
+        <Caret Line="43" Column="5" TopLine="25"/>
+      </Position>
+      <Position>
+        <Filename Value="main.pas"/>
+        <Caret Line="407" Column="66" TopLine="389"/>
+      </Position>
+      <Position>
+        <Filename Value="main.pas"/>
+        <Caret Line="121" Column="15" TopLine="107"/>
+      </Position>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+</CONFIG>

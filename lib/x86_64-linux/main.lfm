@@ -1,0 +1,449 @@
+object frmMain: TfrmMain
+  Left = 4332
+  Height = 957
+  Top = 30
+  Width = 1378
+  Caption = 'What Said?'
+  ClientHeight = 957
+  ClientWidth = 1378
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  LCLVersion = '3.8.0.0'
+  object VideoPanel: TBCPanel
+    Left = 140
+    Height = 662
+    Top = 0
+    Width = 1238
+    Align = alClient
+    Background.Color = clBtnFace
+    Background.Gradient1.StartColor = clWhite
+    Background.Gradient1.EndColor = clBlack
+    Background.Gradient1.GradientType = gtLinear
+    Background.Gradient1.Point1XPercent = 0
+    Background.Gradient1.Point1YPercent = 0
+    Background.Gradient1.Point2XPercent = 0
+    Background.Gradient1.Point2YPercent = 100
+    Background.Gradient2.StartColor = clWhite
+    Background.Gradient2.EndColor = clBlack
+    Background.Gradient2.GradientType = gtLinear
+    Background.Gradient2.Point1XPercent = 0
+    Background.Gradient2.Point1YPercent = 0
+    Background.Gradient2.Point2XPercent = 0
+    Background.Gradient2.Point2YPercent = 100
+    Background.Gradient1EndPercent = 35
+    Background.Style = bbsColor
+    BevelInner = bvNone
+    BevelOuter = bvNone
+    BevelWidth = 1
+    Border.Style = bboNone
+    Caption = 'VideoPanel'
+    Color = clGrayText
+    FontEx.Color = clDefault
+    FontEx.FontQuality = fqFineAntialiasing
+    FontEx.Shadow = False
+    FontEx.ShadowRadius = 5
+    FontEx.ShadowOffsetX = 5
+    FontEx.ShadowOffsetY = 5
+    FontEx.Style = []
+    ParentBackground = False
+    Rounding.RoundX = 1
+    Rounding.RoundY = 1
+    TabOrder = 0
+    object VLCPlayer: TPasLibVlcPlayer
+      Left = 0
+      Height = 630
+      Top = 0
+      Width = 1238
+      Align = alClient
+      BevelOuter = bvNone
+      Caption = 'VLCPlayer'
+      ParentBackground = False
+      ParentColor = False
+      TabOrder = 0
+      OnClick = VLCPlayerClick
+      TitleShow = True
+      SnapShotFmt = 'png'
+      OnMediaPlayerTimeChanged = VLCPlayerMediaPlayerTimeChanged
+      OnMediaPlayerLengthChanged = VLCPlayerMediaPlayerLengthChanged
+      MouseEventsHandler = mehComponent
+    end
+    object TrackBarPanel: TBCPanel
+      Left = 0
+      Height = 32
+      Top = 630
+      Width = 1238
+      Align = alBottom
+      Background.Color = clBtnFace
+      Background.Gradient1.StartColor = clWhite
+      Background.Gradient1.EndColor = clBlack
+      Background.Gradient1.GradientType = gtLinear
+      Background.Gradient1.Point1XPercent = 0
+      Background.Gradient1.Point1YPercent = 0
+      Background.Gradient1.Point2XPercent = 0
+      Background.Gradient1.Point2YPercent = 100
+      Background.Gradient2.StartColor = clWhite
+      Background.Gradient2.EndColor = clBlack
+      Background.Gradient2.GradientType = gtLinear
+      Background.Gradient2.Point1XPercent = 0
+      Background.Gradient2.Point1YPercent = 0
+      Background.Gradient2.Point2XPercent = 0
+      Background.Gradient2.Point2YPercent = 100
+      Background.Gradient1EndPercent = 35
+      Background.Style = bbsColor
+      BevelInner = bvNone
+      BevelOuter = bvNone
+      BevelWidth = 1
+      Border.Style = bboNone
+      Color = clGrayText
+      FontEx.Color = clDefault
+      FontEx.FontQuality = fqFineAntialiasing
+      FontEx.Shadow = False
+      FontEx.ShadowRadius = 5
+      FontEx.ShadowOffsetX = 5
+      FontEx.ShadowOffsetY = 5
+      FontEx.Style = []
+      ParentBackground = False
+      Rounding.RoundX = 1
+      Rounding.RoundY = 1
+      TabOrder = 1
+      object VideoTracker: TTrackBar
+        Left = 0
+        Height = 49
+        Top = -17
+        Width = 1238
+        Position = 0
+        Align = alBottom
+        OnMouseDown = VideoTrackerMouseDown
+        OnMouseUp = VideoTrackerMouseUp
+        ParentColor = False
+        TabOrder = 0
+      end
+    end
+  end
+  object ControlPanel: TBCPanel
+    Tag = 1
+    Left = 0
+    Height = 662
+    Top = 0
+    Width = 140
+    Align = alLeft
+    Background.Color = clBtnFace
+    Background.Gradient1.StartColor = clWhite
+    Background.Gradient1.EndColor = clBlack
+    Background.Gradient1.GradientType = gtLinear
+    Background.Gradient1.Point1XPercent = 0
+    Background.Gradient1.Point1YPercent = 0
+    Background.Gradient1.Point2XPercent = 0
+    Background.Gradient1.Point2YPercent = 100
+    Background.Gradient2.StartColor = clWhite
+    Background.Gradient2.EndColor = clBlack
+    Background.Gradient2.GradientType = gtLinear
+    Background.Gradient2.Point1XPercent = 0
+    Background.Gradient2.Point1YPercent = 0
+    Background.Gradient2.Point2XPercent = 0
+    Background.Gradient2.Point2YPercent = 100
+    Background.Gradient1EndPercent = 35
+    Background.Style = bbsColor
+    BevelInner = bvNone
+    BevelOuter = bvNone
+    BevelWidth = 0
+    Border.Style = bboNone
+    FontEx.Color = clDefault
+    FontEx.FontQuality = fqFineAntialiasing
+    FontEx.Shadow = False
+    FontEx.ShadowRadius = 5
+    FontEx.ShadowOffsetX = 5
+    FontEx.ShadowOffsetY = 5
+    FontEx.Style = []
+    ParentBackground = False
+    Rounding.RoundX = 1
+    Rounding.RoundY = 1
+    TabOrder = 1
+    OnMouseEnter = ControlPanelMouseEnter
+    object VPlayerCtrlGrp: TGroupBox
+      Left = 0
+      Height = 161
+      Top = 501
+      Width = 140
+      Align = alBottom
+      Caption = 'Video Controls'
+      ClientHeight = 143
+      ClientWidth = 138
+      TabOrder = 0
+      object VideoTimeIndexLable: TLabel
+        Left = 8
+        Height = 17
+        Top = 0
+        Width = 50
+        Caption = 'Position'
+      end
+      object VideoLengthLable1: TLabel
+        Left = 8
+        Height = 17
+        Top = 53
+        Width = 79
+        Caption = 'Video Length'
+      end
+      object PositionLabel: TLabel
+        Left = 32
+        Height = 16
+        Top = 27
+        Width = 5765
+        Anchors = [akLeft]
+        AutoSize = False
+        Caption = '00:00:00'
+        Font.Height = -16
+        Font.Name = 'Sans'
+        ParentFont = False
+      end
+      object LengthLabel: TLabel
+        Left = 42
+        Height = 16
+        Top = 80
+        Width = 5765
+        Anchors = [akRight]
+        AutoSize = False
+        Caption = '00:00:00'
+        Font.Height = -16
+        Font.Name = 'Sans'
+        ParentFont = False
+      end
+      object VidCtrlPanel: TBCPanel
+        Left = 0
+        Height = 32
+        Top = 111
+        Width = 138
+        Align = alBottom
+        Background.Color = clBtnFace
+        Background.Gradient1.StartColor = clWhite
+        Background.Gradient1.EndColor = clBlack
+        Background.Gradient1.GradientType = gtLinear
+        Background.Gradient1.Point1XPercent = 0
+        Background.Gradient1.Point1YPercent = 0
+        Background.Gradient1.Point2XPercent = 0
+        Background.Gradient1.Point2YPercent = 100
+        Background.Gradient2.StartColor = clWhite
+        Background.Gradient2.EndColor = clBlack
+        Background.Gradient2.GradientType = gtLinear
+        Background.Gradient2.Point1XPercent = 0
+        Background.Gradient2.Point1YPercent = 0
+        Background.Gradient2.Point2XPercent = 0
+        Background.Gradient2.Point2YPercent = 100
+        Background.Gradient1EndPercent = 35
+        Background.Style = bbsColor
+        BevelInner = bvNone
+        BevelOuter = bvNone
+        BevelWidth = 1
+        Border.Style = bboNone
+        FontEx.Color = clDefault
+        FontEx.FontQuality = fqFineAntialiasing
+        FontEx.Shadow = False
+        FontEx.ShadowRadius = 5
+        FontEx.ShadowOffsetX = 5
+        FontEx.ShadowOffsetY = 5
+        FontEx.Style = []
+        ParentBackground = False
+        Rounding.RoundX = 1
+        Rounding.RoundY = 1
+        TabOrder = 0
+        object PlayPauseBtn: TSpeedButton
+          Left = 106
+          Height = 32
+          Top = 0
+          Width = 32
+          Align = alRight
+          Images = DataMod.ControlButtonImages
+          ImageIndex = 2
+          OnClick = PlayPauseBtnClick
+        end
+        object RewindBtn: TSpeedButton
+          Left = 0
+          Height = 32
+          Top = 0
+          Width = 32
+          Align = alLeft
+          Images = DataMod.ControlButtonImages
+          ImageIndex = 4
+          OnClick = RewindBtnClick
+        end
+        object ForwardBtn: TSpeedButton
+          Left = 32
+          Height = 32
+          Top = 0
+          Width = 32
+          Align = alLeft
+          Images = DataMod.ControlButtonImages
+          ImageIndex = 0
+          OnClick = ForwardBtnClick
+        end
+        object StopBtn: TSpeedButton
+          Left = 64
+          Height = 32
+          Top = 0
+          Width = 32
+          Align = alLeft
+          Images = DataMod.ControlButtonImages
+          ImageIndex = 1
+          OnClick = StopBtnClick
+        end
+      end
+    end
+    object NewFolderImg: TImage
+      Left = 13
+      Height = 48
+      Top = 48
+      Width = 50
+      Center = True
+      ImageIndex = 6
+      ImageWidth = 48
+      Images = DataMod.ControlButtonImages
+      OnClick = NewFolderImgClick
+    end
+    object SaveBookmarksImg: TImage
+      Left = 13
+      Height = 48
+      Top = 112
+      Width = 50
+      ImageIndex = 7
+      ImageWidth = 48
+      Images = DataMod.ControlButtonImages
+    end
+    object AutoSaveSwitch: TECSwitch
+      Left = 32
+      Height = 56
+      Top = 432
+      Width = 66
+      Caption = 'Auto Save'
+      CaptionPos = eopTop
+      TabOrder = 1
+      OnClick = AutoSaveSwitchClick
+    end
+  end
+  object InfoPanel: TBCExpandPanel
+    Left = 0
+    Height = 295
+    Top = 662
+    Width = 1378
+    Align = alBottom
+    Background.Color = clBtnFace
+    Background.Gradient1.StartColor = clWhite
+    Background.Gradient1.EndColor = clBlack
+    Background.Gradient1.GradientType = gtLinear
+    Background.Gradient1.Point1XPercent = 0
+    Background.Gradient1.Point1YPercent = 0
+    Background.Gradient1.Point2XPercent = 0
+    Background.Gradient1.Point2YPercent = 100
+    Background.Gradient2.StartColor = clWhite
+    Background.Gradient2.EndColor = clBlack
+    Background.Gradient2.GradientType = gtLinear
+    Background.Gradient2.Point1XPercent = 0
+    Background.Gradient2.Point1YPercent = 0
+    Background.Gradient2.Point2XPercent = 0
+    Background.Gradient2.Point2YPercent = 100
+    Background.Gradient1EndPercent = 35
+    Background.Style = bbsColor
+    BevelInner = bvNone
+    BevelOuter = bvRaised
+    BevelWidth = 1
+    Border.Style = bboNone
+    Caption = 'Hello'
+    Enabled = True
+    FontEx.Color = clDefault
+    FontEx.FontQuality = fqFineAntialiasing
+    FontEx.Shadow = False
+    FontEx.ShadowRadius = 5
+    FontEx.ShadowOffsetX = 5
+    FontEx.ShadowOffsetY = 5
+    FontEx.Style = []
+    ParentBackground = False
+    Rounding.RoundX = 1
+    Rounding.RoundY = 1
+    TabOrder = 2
+    TextAlignment = taLeftJustify
+    CollapseKind = akTop
+    ExpandedSize = 295
+    ButtonPosition = akTop
+    ButtonSize = 27
+    Button.Left = 0
+    Button.Height = 27
+    Button.Top = 0
+    Button.Width = 1378
+    Button.Caption = 'Caption'
+    Button.Color = clSkyBlue
+    Button.ColorExpanded = clGrayText
+    AnimationSpeed = 20
+    object PageControl1: TPageControl
+      Left = 1
+      Height = 266
+      Top = 28
+      Width = 1376
+      ActivePage = TabSheet1
+      Align = alClient
+      TabIndex = 0
+      TabOrder = 0
+      object TabSheet1: TTabSheet
+        Caption = 'Bookmarks'
+        ClientHeight = 235
+        ClientWidth = 1366
+        object BookmarkGrid: TStringGrid
+          Left = 0
+          Height = 235
+          Top = 0
+          Width = 1366
+          Align = alClient
+          Color = clDefault
+          ColCount = 4
+          DoubleBuffered = False
+          FixedCols = 0
+          HeaderHotZones = [gzFixedCols, gzFixedRows]
+          Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goColSizing, goEditing, goRowSelect, goFixedColSizing]
+          ParentDoubleBuffered = False
+          RowCount = 1
+          TabOrder = 0
+          OnMouseDown = BookmarkGridMouseDown
+          ColWidths = (
+            76
+            194
+            125
+            208
+          )
+          Cells = (
+            4
+            0
+            0
+            'Start Time'
+            1
+            0
+            'Description'
+            2
+            0
+            'Video Name'
+            3
+            0
+            'Video Path'
+          )
+        end
+      end
+      object TabSheet2: TTabSheet
+        Caption = 'Videos'
+        ClientHeight = 235
+        ClientWidth = 1366
+        object FileListBox: TFileListBox
+          Left = 0
+          Height = 235
+          Top = 0
+          Width = 1366
+          Align = alClient
+          Directory = '/home/jon'
+          ItemHeight = 0
+          OnChange = FileListBoxChange
+          TabOrder = 0
+          TopIndex = -1
+        end
+      end
+      object TabSheet3: TTabSheet
+        Caption = 'Timeline'
+      end
+    end
+  end
+end

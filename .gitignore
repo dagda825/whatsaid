@@ -1,0 +1,155 @@
+# Compiled source #
+####################
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# Packages #
+############
+# it's better to add package directories to avoid accidentally ignoring project source files
+# instead of listing artifacts by extension
+
+# Package Managers #
+##################
+# Node.js
+node_modules
+package-lock.json
+npm-debug.log
+yarn-error.log
+.pnp
+.pnp.js
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.coverage
+*.egg-info/
+dist/
+build/
+wheels/
+pip-log.txt
+pip-delete-this.txt
+.tox/
+.venv/
+venv/
+
+# Java
+*.jar
+*.war
+*.ear
+target/
+bin/
+.mvn/wrapper/maven-wrapper.jar
+.gradle/
+build/
+
+# Ruby
+*.gem
+Gemfile.lock
+.bundle/
+vendor/bundle
+
+# Go
+bin/
+pkg/
+*.out
+
+# Rust
+target/
+Cargo.lock
+
+# PHP
+vendor/
+composer.lock
+
+# Visual Studio Code #
+######################
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history/
+
+# IntelliJ IDEA #
+###################
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+.save/
+
+# Eclipse #
+###########
+.metadata/
+.plugins/
+bin/
+
+# NetBeans #
+############
+nbproject/private/
+build/
+dist/
+nbbuild/
+
+# macOS #
+#########
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnails #
+##############
+._*
+.thumbnails/
+
+# Log files #
+#############
+*.log
+*.out
+debug.log
+
+# Temporary files #
+###################
+*~
+\#*\#
+*.swp
+*.swo
+*.tmp
+.DS_Store?
+
+# Environment files #
+#####################
+.env
+.env.*
+!.env.example
+!.env.local
+
+# Build artifacts #
+###################
+out/
+build/
+dist/
+
+# Personal files (adjust as needed) #
+####################################
+personal.log
+todo.txt
+notes.md
+
+# Ignore editor backups (adjust as needed) #
+#########################################
+*.bak
+*.orig
+
+# Specific files you want to ignore #
+####################################
+config/local.json
+secrets.key
+videobookmarks
