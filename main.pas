@@ -7,7 +7,7 @@ interface
 uses
   Classes, SysUtils, Forms, Controls, Graphics, DateUtils, Dialogs, ExtCtrls,
   StdCtrls, ComCtrls, Grids, DBGrids, FileCtrl, Buttons, BCExpandPanels,
-  BCPanel, PasLibVlcPlayerUnit, FileUtil, BGRABitmap, DataModule, ECSwitch, Types;
+  BCPanel, PasLibVlcPlayerUnit, FileUtil, BGRABitmap, DataModule, ECSwitch, Types, LCLType;
 
 const
   // VideoFilePathIndex is the column where the path to the video to be run is stored.
@@ -98,31 +98,19 @@ begin
 end;
 
 procedure TfrmMain.PlayPauseBtnClick(Sender: TObject);
-var
-  VLCStateStr : string;
 begin
-  // first, decide if we're playing a video. if yes, pause, if no, play.
-  VLCStateStr := VLCPlayer.GetStateName;
-
-  if(VLCStateStr = 'Paused') then
+  if PlayPauseBtn.ImageIndex = 2 then
   begin
-    VLCPlayer.Resume;
-    PlayPauseBtn.ImageIndex := 2;
-  end
-  else if(VLCStateStr = 'Playing') then
-  begin
-    VLCPlayer.Pause;
     PlayPauseBtn.ImageIndex := 3;
+    if VLCPlayer.GetStateName = 'Paused' then
+        VLCPlayer.Resume
+    else
+        LoadVideo;
   end
   else
   begin
-    if(VideoPathStr <> '') then
-    begin
-    LoadVideo;
-    PlayPauseBtn.ImageIndex := 3;
-    end
-    else
-        ShowMessage('Please select a video before attempting to play . . .');
+       PlayPauseBtn.ImageIndex := 2;
+       VLCPlayer.Pause
   end;
 end;
 
@@ -266,14 +254,28 @@ end;
 //end;
 
 procedure TfrmMain.NewFolderImgClick(Sender: TObject);
+var
+  reply, boxstyle : integer;
 begin
   if DataMod.SelectDirectoryDialog.Execute then
   begin
-    FileListBox.Directory := DataMod.SelectDirectoryDialog.FileName;
-
+    with application do
+    begin
+        if BookMarkGrid.Modified = True then
+        begin
+          boxstyle := MB_YESNO;
+          reply := MessageBox('Save bookmarks before switching videos?', 'Save Bookmakrs?', boxstyle);
+          if (reply = IDYES) then
+             saveBookmarks;
+        end;
+    end;
   end;
-
+// flush the bookmarks before switching folders.
+    BookmarkGrid.Clear;
+    FileListBox.Directory := DataMod.SelectDirectoryDialog.FileName;
+    getBookmarks;
 end;
+
 
 //procedure TfrmMain.imgRewindClick(Sender: TObject);
 //var
@@ -395,18 +397,27 @@ var
 begin
   LoadFromFile := FileListBox.Directory + '/Bookmarks.CSV';
   if FileExists(LoadFromFile) then
-    BookMarkGrid.LoadFromCSVFile(LoadFromFile);
+  begin
+     BookmarkGrid.Clear;
+     BookMarkGrid.LoadFromCSVFile(LoadFromFile);
+  end;
 
 end;
-
+{ #todo -oJon : Problem: It's possible a new folder can be selected without first saving the current one. Bookmarks might be wrongly saved to a different video.
+}
 procedure TfrmMain.SaveBookmarks;
 var
   SaveToFile: string;
 begin
-  SaveToFile := FileListBox.Directory + '/Bookmarks.CSV';
-  CopyFile(SaveToFile, FileListBox.Directory + '/Bookmarks.BAK');
-  BookMarkGrid.SaveToCSVFile(SaveToFile);
-
+  if (FileListBox.Directory <> '') then
+  begin
+      SaveToFile := FileListBox.Directory + '/Bookmarks.CSV';
+      CopyFile(SaveToFile, FileListBox.Directory + '/Bookmarks.BAK');
+      if (BookmarkGrid.RowCount > 0 ) then
+        BookMarkGrid.SaveToCSVFile(SaveToFile);
+  end
+  else
+      ShowMessage('There is no folder selected. Bookmarks were not saved');
 end;
 
 

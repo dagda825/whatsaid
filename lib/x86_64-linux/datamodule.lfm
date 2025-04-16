@@ -1,12 +1,12 @@
 object DataMod: TDataMod
   OnCreate = DataModuleCreate
   OldCreateOrder = False
-  Height = 387
+  Height = 376
   HorizontalOffset = 1363
   VerticalOffset = 122
   Width = 507
   object SelectDirectoryDialog: TSelectDirectoryDialog
-    Filter = 'Web Movies|*.webm|MP4 Movies|*.mp4|MKV Movies|*.mkv|Flac Movies|*.flac'
+    Filter = '*'
     Left = 336
     Top = 24
   end

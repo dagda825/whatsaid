@@ -1,17 +1,17 @@
 object frmMain: TfrmMain
-  Left = 4332
-  Height = 957
-  Top = 30
+  Left = 79
+  Height = 946
+  Top = 59
   Width = 1378
   Caption = 'What Said?'
-  ClientHeight = 957
+  ClientHeight = 946
   ClientWidth = 1378
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   LCLVersion = '3.8.0.0'
   object VideoPanel: TBCPanel
     Left = 140
-    Height = 662
+    Height = 651
     Top = 0
     Width = 1238
     Align = alClient
@@ -51,7 +51,7 @@ object frmMain: TfrmMain
     TabOrder = 0
     object VLCPlayer: TPasLibVlcPlayer
       Left = 0
-      Height = 630
+      Height = 619
       Top = 0
       Width = 1238
       Align = alClient
@@ -70,7 +70,7 @@ object frmMain: TfrmMain
     object TrackBarPanel: TBCPanel
       Left = 0
       Height = 32
-      Top = 630
+      Top = 619
       Width = 1238
       Align = alBottom
       Background.Color = clBtnFace
@@ -123,7 +123,7 @@ object frmMain: TfrmMain
   object ControlPanel: TBCPanel
     Tag = 1
     Left = 0
-    Height = 662
+    Height = 651
     Top = 0
     Width = 140
     Align = alLeft
@@ -163,7 +163,7 @@ object frmMain: TfrmMain
     object VPlayerCtrlGrp: TGroupBox
       Left = 0
       Height = 161
-      Top = 501
+      Top = 490
       Width = 140
       Align = alBottom
       Caption = 'Video Controls'
@@ -322,7 +322,7 @@ object frmMain: TfrmMain
   object InfoPanel: TBCExpandPanel
     Left = 0
     Height = 295
-    Top = 662
+    Top = 651
     Width = 1378
     Align = alBottom
     Background.Color = clBtnFace
@@ -377,9 +377,9 @@ object frmMain: TfrmMain
       Height = 266
       Top = 28
       Width = 1376
-      ActivePage = TabSheet1
+      ActivePage = TabSheet2
       Align = alClient
-      TabIndex = 0
+      TabIndex = 1
       TabOrder = 0
       object TabSheet1: TTabSheet
         Caption = 'Bookmarks'
@@ -393,6 +393,26 @@ object frmMain: TfrmMain
           Align = alClient
           Color = clDefault
           ColCount = 4
+          Columns = <          
+            item
+              MinSize = 50
+              MaxSize = 70
+              Title.Caption = 'Time'
+              Width = 60
+            end          
+            item
+              Title.Caption = 'Description'
+              Width = 255
+            end          
+            item
+              Title.Caption = 'Video Name'
+              Width = 350
+            end          
+            item
+              Title.Caption = 'Path'
+              Width = 698
+            end>
+          DefaultColWidth = 150
           DoubleBuffered = False
           FixedCols = 0
           HeaderHotZones = [gzFixedCols, gzFixedRows]
@@ -401,26 +421,11 @@ object frmMain: TfrmMain
           RowCount = 1
           TabOrder = 0
           OnMouseDown = BookmarkGridMouseDown
-          ColWidths = (
-            76
-            194
-            125
-            208
-          )
           Cells = (
-            4
+            1
             0
             0
             'Start Time'
-            1
-            0
-            'Description'
-            2
-            0
-            'Video Name'
-            3
-            0
-            'Video Path'
           )
         end
       end
@@ -436,6 +441,7 @@ object frmMain: TfrmMain
           Align = alClient
           Directory = '/home/jon'
           ItemHeight = 0
+          Mask = '*.mp4;*.webm;*.mkv;*.flacc;*.ogg'
           OnChange = FileListBoxChange
           TabOrder = 0
           TopIndex = -1

@@ -2,10 +2,11 @@ object DataMod: TDataMod
   OnCreate = DataModuleCreate
   OldCreateOrder = False
   Height = 387
-  HorizontalOffset = 3840
+  HorizontalOffset = 1363
   VerticalOffset = 122
   Width = 507
   object SelectDirectoryDialog: TSelectDirectoryDialog
+    Filter = '*'
     Left = 336
     Top = 24
   end
