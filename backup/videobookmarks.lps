@@ -7,10 +7,9 @@
       <Unit>
         <Filename Value="videobookmarks.lpr"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="2"/>
+        <EditorIndex Value="-1"/>
         <CursorPos Y="17"/>
         <UsageCount Value="217"/>
-        <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="main.pas"/>
@@ -19,10 +18,8 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="Main"/>
-        <IsVisibleTab Value="True"/>
-        <TopLine Value="98"/>
-        <CursorPos X="4" Y="109"/>
-        <FoldState Value=" T3lI0A096 PiPm20 TMp40D3"/>
+        <TopLine Value="10"/>
+        <CursorPos X="75" Y="10"/>
         <UsageCount Value="217"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -34,12 +31,37 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="DataModule"/>
         <UnitName Value="DataModule"/>
-        <EditorIndex Value="3"/>
-        <TopLine Value="25"/>
-        <CursorPos X="3" Y="43"/>
-        <UsageCount Value="124"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="15"/>
+        <CursorPos X="5" Y="34"/>
+        <UsageCount Value="165"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="geimini.hints.txt"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="2"/>
+        <CursorPos X="21" Y="11"/>
+        <UsageCount Value="60"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Text"/>
+      </Unit>
+      <Unit>
+        <Filename Value="wsutils.pas"/>
+        <UnitName Value="WSUtils"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="60" Y="8"/>
+        <UsageCount Value="54"/>
+      </Unit>
+      <Unit>
+        <Filename Value="wsinifiles.pas"/>
+        <UnitName Value="WSIniFiles"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="4"/>
+        <CursorPos Y="26"/>
+        <UsageCount Value="50"/>
       </Unit>
       <Unit>
         <Filename Value="/media/jon/Storage2/Jon Archive/Projects/Pascal/VideoBookMarks/dataaccess.pas"/>
@@ -48,7 +70,7 @@
         <TopLine Value="60"/>
         <CursorPos X="5" Y="86"/>
         <FoldState Value=" T3X26211 PPc2;"/>
-        <UsageCount Value="17"/>
+        <UsageCount Value="13"/>
       </Unit>
       <Unit>
         <Filename Value="/media/jon/Storage2/Jon Archive/Projects/Pascal/VideoBookMarks/bookmarkform.pas"/>
@@ -60,7 +82,7 @@
         <TopLine Value="35"/>
         <CursorPos Y="109"/>
         <FoldState Value=" T3i7033 Pi1]9o"/>
-        <UsageCount Value="78"/>
+        <UsageCount Value="74"/>
       </Unit>
       <Unit>
         <Filename Value="/usr/share/lazarus/3.2.0/lcl/lresources.pp"/>
@@ -68,14 +90,14 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="3150"/>
         <CursorPos Y="3164"/>
-        <UsageCount Value="0"/>
+        <UsageCount Value="6"/>
       </Unit>
       <Unit>
         <Filename Value="/media/jon/Storage2/Jon Archive/Projects/Pascal/PasLibVlc/source.vcl/PasLibVlcPlayerUnit.pas"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="4998"/>
         <CursorPos X="5" Y="5019"/>
-        <UsageCount Value="12"/>
+        <UsageCount Value="8"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit>
       <Unit>
@@ -86,7 +108,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="5"/>
         <CursorPos X="8" Y="19"/>
-        <UsageCount Value="11"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="/media/jon/Storage2/Jon Archive/Projects/Pascal/VideoBookMarks/filedict.pas"/>
@@ -94,145 +116,64 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="7"/>
         <CursorPos X="5" Y="18"/>
-        <UsageCount Value="40"/>
+        <UsageCount Value="36"/>
       </Unit>
       <Unit>
         <Filename Value="/usr/share/lazarus/3.8.0/lcl/include/control.inc"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="2949"/>
         <CursorPos Y="2976"/>
-        <UsageCount Value="14"/>
+        <UsageCount Value="10"/>
       </Unit>
       <Unit>
         <Filename Value="/usr/share/lazarus/3.8.0/lcl/grids.pas"/>
         <UnitName Value="Grids"/>
-        <EditorIndex Value="1"/>
+        <EditorIndex Value="-1"/>
         <TopLine Value="12261"/>
         <CursorPos Y="12280"/>
-        <UsageCount Value="13"/>
-        <Loaded Value="True"/>
+        <UsageCount Value="9"/>
       </Unit>
     </Units>
-    <JumpHistory HistoryIndex="29">
+    <JumpHistory HistoryIndex="9">
       <Position>
-        <Filename Value="main.pas"/>
-        <Caret Line="121" Column="15" TopLine="107"/>
+        <Filename Value="datamodule.pas"/>
+        <Caret Line="54" Column="8" TopLine="43"/>
       </Position>
       <Position>
         <Filename Value="datamodule.pas"/>
-        <Caret Line="45" Column="49" TopLine="25"/>
+        <Caret Line="62" Column="5" TopLine="23"/>
       </Position>
       <Position>
-        <Filename Value="main.pas"/>
-        <Caret Line="405" Column="2" TopLine="369"/>
+        <Filename Value="datamodule.pas"/>
+        <Caret Line="56" TopLine="38"/>
       </Position>
       <Position>
-        <Filename Value="main.pas"/>
-        <Caret Line="275" Column="5" TopLine="262"/>
+        <Filename Value="datamodule.pas"/>
+        <Caret Line="42" Column="3" TopLine="33"/>
       </Position>
       <Position>
-        <Filename Value="main.pas"/>
-        <Caret Line="273" Column="88" TopLine="262"/>
+        <Filename Value="datamodule.pas"/>
+        <Caret Line="24" Column="15" TopLine="17"/>
       </Position>
       <Position>
-        <Filename Value="main.pas"/>
-        <Caret Line="283" Column="53" TopLine="265"/>
+        <Filename Value="datamodule.pas"/>
+        <Caret Line="41" Column="22" TopLine="30"/>
       </Position>
       <Position>
-        <Filename Value="main.pas"/>
-        <Caret Line="10" Column="91" TopLine="5"/>
+        <Filename Value="datamodule.pas"/>
+        <Caret Line="25" Column="3" TopLine="14"/>
       </Position>
       <Position>
-        <Filename Value="main.pas"/>
-        <Caret Line="280" Column="27" TopLine="270"/>
+        <Filename Value="datamodule.pas"/>
+        <Caret Line="58" TopLine="40"/>
       </Position>
       <Position>
-        <Filename Value="main.pas"/>
-        <Caret Line="284" Column="13" TopLine="273"/>
+        <Filename Value="datamodule.pas"/>
+        <Caret Line="58" TopLine="35"/>
       </Position>
       <Position>
-        <Filename Value="main.pas"/>
-        <Caret Line="409" TopLine="377"/>
-      </Position>
-      <Position>
-        <Filename Value="main.pas"/>
-        <Caret Line="410" TopLine="377"/>
-      </Position>
-      <Position>
-        <Filename Value="main.pas"/>
-        <Caret Line="412" TopLine="377"/>
-      </Position>
-      <Position>
-        <Filename Value="main.pas"/>
-        <Caret Line="413" TopLine="377"/>
-      </Position>
-      <Position>
-        <Filename Value="main.pas"/>
-        <Caret Line="416" TopLine="380"/>
-      </Position>
-      <Position>
-        <Filename Value="videobookmarks.lpr"/>
-        <Caret Line="17"/>
-      </Position>
-      <Position>
-        <Filename Value="main.pas"/>
-        <Caret Line="409" TopLine="380"/>
-      </Position>
-      <Position>
-        <Filename Value="main.pas"/>
-        <Caret Line="410" TopLine="380"/>
-      </Position>
-      <Position>
-        <Filename Value="main.pas"/>
-        <Caret Line="412" TopLine="380"/>
-      </Position>
-      <Position>
-        <Filename Value="main.pas"/>
-        <Caret Line="413" TopLine="380"/>
-      </Position>
-      <Position>
-        <Filename Value="/usr/share/lazarus/3.8.0/lcl/grids.pas"/>
-        <Caret Line="12273" TopLine="12261"/>
-      </Position>
-      <Position>
-        <Filename Value="/usr/share/lazarus/3.8.0/lcl/grids.pas"/>
-        <Caret Line="12274" TopLine="12261"/>
-      </Position>
-      <Position>
-        <Filename Value="/usr/share/lazarus/3.8.0/lcl/grids.pas"/>
-        <Caret Line="12275" TopLine="12261"/>
-      </Position>
-      <Position>
-        <Filename Value="/usr/share/lazarus/3.8.0/lcl/grids.pas"/>
-        <Caret Line="12276" TopLine="12261"/>
-      </Position>
-      <Position>
-        <Filename Value="/usr/share/lazarus/3.8.0/lcl/grids.pas"/>
-        <Caret Line="12278" TopLine="12261"/>
-      </Position>
-      <Position>
-        <Filename Value="/usr/share/lazarus/3.8.0/lcl/grids.pas"/>
-        <Caret Line="12280" TopLine="12261"/>
-      </Position>
-      <Position>
-        <Filename Value="main.pas"/>
-        <Caret Line="217" Column="15" TopLine="201"/>
-      </Position>
-      <Position>
-        <Filename Value="main.pas"/>
-        <Caret Line="216" Column="15" TopLine="200"/>
-      </Position>
-      <Position>
-        <Filename Value="main.pas"/>
-        <Caret Line="119" Column="62" TopLine="107"/>
-      </Position>
-      <Position>
-        <Filename Value="main.pas"/>
-        <Caret Line="114" Column="3" TopLine="95"/>
-      </Position>
-      <Position>
-        <Filename Value="main.pas"/>
-        <Caret Line="266" Column="9" TopLine="254"/>
+        <Filename Value="geimini.hints.txt"/>
+        <Caret Line="72" Column="5" TopLine="64"/>
       </Position>
     </JumpHistory>
     <RunParams>

@@ -7,7 +7,7 @@ interface
 uses
   Classes, SysUtils, Forms, Controls, Graphics, DateUtils, Dialogs, ExtCtrls,
   StdCtrls, ComCtrls, Grids, DBGrids, FileCtrl, Buttons, BCExpandPanels,
-  BCPanel, PasLibVlcPlayerUnit, FileUtil, BGRABitmap, DataModule, ECSwitch, Types, LCLType;
+  BCPanel, PasLibVlcPlayerUnit, FileUtil, BGRABitmap, DataModule, ECSwitch; //, Types, LCLType;
 
 const
   // VideoFilePathIndex is the column where the path to the video to be run is stored.

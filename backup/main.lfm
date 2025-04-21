@@ -440,9 +440,11 @@ object frmMain: TfrmMain
           Width = 1366
           Align = alClient
           Directory = '/home/jon'
-          ItemHeight = 23
+          ItemHeight = 0
+          Mask = '*.mp4;*.webm;*.mkv;*.flacc;*.ogg'
           OnChange = FileListBoxChange
           TabOrder = 0
+          TopIndex = -1
         end
       end
       object TabSheet3: TTabSheet

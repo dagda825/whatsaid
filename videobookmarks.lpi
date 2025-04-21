@@ -70,6 +70,10 @@
         <ResourceBaseClass Value="DataModule"/>
         <UnitName Value="DataModule"/>
       </Unit>
+      <Unit>
+        <Filename Value="geimini.hints.txt"/>
+        <IsPartOfProject Value="True"/>
+      </Unit>
     </Units>
   </ProjectOptions>
   <CompilerOptions>

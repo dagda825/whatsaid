@@ -2,8 +2,8 @@ object DataMod: TDataMod
   OnCreate = DataModuleCreate
   OldCreateOrder = False
   Height = 376
-  HorizontalOffset = 1363
-  VerticalOffset = 122
+  HorizontalOffset = 4037
+  VerticalOffset = 110
   Width = 507
   object SelectDirectoryDialog: TSelectDirectoryDialog
     Filter = '*'
@@ -688,6 +688,7 @@ object DataMod: TDataMod
     }
   end
   object Timer1: TTimer
+    Enabled = False
     Interval = 30000
     OnTimer = Timer1Timer
     Left = 91

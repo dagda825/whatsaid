@@ -1,0 +1,21 @@
+ok, so at the end of this session, I've got the logic for creating a new .ini file if needed,
+next is to read config.ini or, should it not be present, create one and place the default
+configuration fields into it.
+
+so the basics for the config.ini, I should call it whatsaid.ini, is:
+(remember, the paths shown are for illustrative purposes only. in the initial
+ install, they should be blank)
+
+[paths]
+base_folder = /home/jon/.local/whatsaid/
+base_config_folder = /home/jon/.config/whatsaid/
+
+[file format]
+file_ext = '.csv'
+
+Note that resolvePathStr only focuses on getting the config path, not the data path.
+I need to update the function to resolve either config or data. I think it can be done
+by passing the environment variable to the function, defaulting to the config file.
+
+I'd like to try keeping the bookmarks.csv files in base_folder, so the TreeNodes structor will
+look like the folders structure under base_folder.
