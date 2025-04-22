@@ -10,7 +10,7 @@ uses
   athreads,
   {$ENDIF}
   Interfaces, // this includes the LCL widgetset
-  Forms, datetimectrls, Main, PasLibVlcPlayer, DataModule;
+  Forms, datetimectrls, Main, PasLibVlcPlayer, DataModule, wsinifiles;
 
 {$R *.res}
 

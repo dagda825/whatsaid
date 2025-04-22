@@ -1,92 +1,55 @@
-unit WSIniFiles;
+unit wsinifiles;
 
-{$mode ObjFPC}{$H+}
+{$mode objfpc}{$H+}
 
 interface
-{
- Basic ini file layout -- note: the base_folder path is for example. The program will work out
-                                the real base_folder by having the user pick a default folder
-                                at first run.
- file_ext              -- note: file_ext defaults to .csv mainly due to StringGrid saving files
-                                to .csv by default. I may, in the future, expand the capability
-                                to add .tsv. We'll see.
-
- I'm also considering adding a themeing section to make skining the program easier.
-
- [paths]
- base_folder = /home/jon/.local/whatsaid/
-
- [file format]
- file_ext = '.csv'
-}
 
 uses
-  Classes, SysUtils, Dialogs, Controls, ExtCtrls, ComCtrls;
+   SysUtils, IniFiles;
 
-type
+var
+  baseFolder, fileExt, baseConfigFolder : String;
 
-  TWSIniFile = class
-  private
-    FIniFileStringList: TStringList;
-    FBaseFolder : String;
-    FFileExt : String;
-    FConfigFolder: String;
-    function getBaseFolder: String;
-    function getFileExt: String;
-    function getConfigFolder: String;
-    function loadConfigFolder: boolean;
 
-  public
+procedure ReadIniFile(const PathStr : String);
+procedure WriteIniFile(const PathStr: String);
 
-    constructor Create;
-    destructor Destroy; override;
-
-    property BaseFolder: String read getBaseFolder;
-    property FileExt: String read getFileExt;
-    property ConfigFolder: String read getConfigFolder;
-
-  end;
-
-  function resolvePathStr(const WorkingDirectory: string; const UseConfigHome: boolean = true): string;
+function resolvePathStr(const SubPath: String; const UseConfigHome: boolean = true): String;
 
 implementation
 
-uses DataModule;
-
-// private functions/procedures
-
-
-constructor TWSIniFile.Create;
+procedure ReadIniFile(const PathStr : String);
+var
+  Settings: TIniFile;
+  IniFolderStr : String;
 begin
-  if not Assigned(FIniFileStringList) then
-     FIniFileStringList := TStringList.Create;
-  loadConfigFolder;
+
+   IniFolderStr := resolvePathStr(PathStr);
+   Settings := TIniFile.Create(IniFolderStr);
+   baseFolder := Settings.ReadString('paths', 'base_folder', '');
+   baseConfigFolder := Settings.ReadString('paths', 'base_config_folder', '');
+   FileExt := Settings.ReadString('file_format', 'file_ext', '');
+   Settings.Free;
+
 end;
 
-destructor TWSIniFile.Destroy;
+procedure WriteIniFile(const PathStr : String);
+var
+  Settings: TIniFile;
+  IniFolderStr : String;
 begin
-     inherited Destroy;
-     FIniFileStringList.Free;
+
+   IniFolderStr := resolvePathStr(PathStr);
+   Settings := TIniFile.Create(IniFolderStr);
+   Settings.WriteString('paths', 'base_folder', '');
+   Settings.WriteString('paths', 'base_config_folder', '');
+   Settings.WriteString('file_format', 'file_ext', '');
+   Settings.Free;
+
 end;
 
-function TWSIniFile.getBaseFolder: String;
-begin
-   Result := FBaseFolder;
-end;
 
-function TWSIniFile.getFileExt: String;
-begin
-  Result := FFileExt;
-end;
-
-function TWSIniFile.getConfigFolder: String;
-begin
-  if FConfigFolder = '' then
-     resolfPathStr('/WhatSaid/WhatSaid.ini');
-  Result := FConfigFolder;
-end;
-
-function resolvePathStr(const WorkingDirectory: string; const UseConfigHome: boolean = true): string;
+function resolvePathStr(const SubPath: string; const UseConfigHome: boolean = true): string;
 var
   BaseDir: string;
   ResultPath: string;
@@ -109,7 +72,7 @@ begin
       BaseDir := IncludeTrailingPathDelimiter(ExpandFileName('~/')); // Fallback to home if HOME is not set
   end;
 
-  ResultPath := BaseDir + WorkingDirectory;
+  ResultPath := BaseDir + SubPath;
 
   // Ensure the directory exists
   if not DirectoryExists(ResultPath) then
@@ -125,8 +88,6 @@ begin
   Result := ResultPath;
 end;
 
-
-//
 //// Example usage:
 //var
 //  ConfigDir: string;
@@ -174,3 +135,4 @@ end;
 //end.
 
 end.
+

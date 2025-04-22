@@ -1,5 +1,6 @@
 object DataMod: TDataMod
   OnCreate = DataModuleCreate
+  OnDestroy = DataModuleDestroy
   OldCreateOrder = False
   Height = 376
   HorizontalOffset = 1363

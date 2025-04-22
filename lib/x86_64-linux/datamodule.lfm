@@ -1,8 +1,9 @@
 object DataMod: TDataMod
   OnCreate = DataModuleCreate
+  OnDestroy = DataModuleDestroy
   OldCreateOrder = False
   Height = 376
-  HorizontalOffset = 4037
+  HorizontalOffset = 1363
   VerticalOffset = 110
   Width = 507
   object SelectDirectoryDialog: TSelectDirectoryDialog
